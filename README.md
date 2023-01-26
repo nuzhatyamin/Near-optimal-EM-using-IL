@@ -20,7 +20,7 @@ Please cite our work using the following way if you find it motivating to your w
  
  **General Info and Tests:** The data preparation file generates the feature files for train, validation and testing. 
 - **Other Function Files:** 
-  - (https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/functions) primarily contain associated functions of the data preparation file.
+  - [Functions] (https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/functions) primarily contain associated functions of the data preparation file.
 - **Data Files** 
   - The [Data](https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/Data) repository contains sample NREL Energy harvest data(2015-2017) and optimal energy allocation data. The data is used to generate features to train policys.
 - **Data Preparation**
@@ -31,7 +31,7 @@ Please cite our work using the following way if you find it motivating to your w
     Command: python create_xml.py –file_dir ‘Data/Train_files/’ –out_dir ‘Data’ –filename train.xml
     
  **Reference**
- Hoang M. Le, Andrew Kang, Yisong Yue, Peter Carr: Smooth Imitation Learning for Online Sequence Prediction (ICML), 2016 [https://arxiv.org/abs/1606.00968]
- [https://sites.google.com/view/smooth-imitation-learning?pli=1]
+    1. Hoang M. Le, Andrew Kang, Yisong Yue, Peter Carr: Smooth Imitation Learning for Online Sequence Prediction (ICML), 2016 [Link](https://arxiv.org/abs/1606.00968)
+    2. Implementation of reference 1 [Link](https://sites.google.com/view/smooth-imitation-learning?pli=1) 
  
 
