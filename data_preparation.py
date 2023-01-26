@@ -159,7 +159,7 @@ for day in range(warmup_period+1, np.shape(data)[0]):
         #print(previous_hour_energy)
         actual_energy_curr_slot = data[day, slot]
         #EH_initial_est = EH_init_mat[day,:]
-        curr_features = generate_feature_vector_simile(slot, curr_month, curr_day, previous_slot_energies, previous_hour_energy,
+        curr_features = generate_feature_vector(slot, curr_month, curr_day, previous_slot_energies, previous_hour_energy,
                                                 previous_day_energy,  Eh_initial, Ebat, active_slots)
 
         feature_matrix[feature_index, 0] = curr_year
