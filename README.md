@@ -29,4 +29,9 @@ Please cite our work using the following way if you find it motivating to your w
     Separate the files into Train_files, Valid_files and Test_files folders 
     Create xml files containing corresponding pickle files
     Command: python create_xml.py –file_dir ‘Data/Train_files/’ –out_dir ‘Data’ –filename train.xml
+    
+ **Reference**
+ Hoang M. Le, Andrew Kang, Yisong Yue, Peter Carr: Smooth Imitation Learning for Online Sequence Prediction (ICML), 2016 [https://arxiv.org/abs/1606.00968]
+ [https://sites.google.com/view/smooth-imitation-learning?pli=1]
+ 
 
