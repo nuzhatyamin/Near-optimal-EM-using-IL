@@ -23,3 +23,10 @@ Please cite our work using the following way if you find it motivating to your w
   - (https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/functions) primarily contain associated functions of the data preparation file.
 - **Data Files** 
   - The [Data](https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/Data) repository contains sample NREL Energy harvest data(2015-2017) and optimal energy allocation data. The data is used to generate features to train policys.
+- **Data Preparation**
+  - Run simile_data_preparation.py
+    Each episode will be 24 hours and saved as .p files in the Data/Files folder
+    Separate the files into Train_files, Valid_files and Test_files folders 
+    Create xml files containing corresponding pickle files
+    Command: python create_xml.py –file_dir ‘Data/Train_files/’ –out_dir ‘Data’ –filename train.xml
+
