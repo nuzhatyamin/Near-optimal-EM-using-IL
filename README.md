@@ -24,7 +24,8 @@ Please cite our work using the following way if you find it motivating to your w
 - **Data Files** 
   - The [Data](https://github.com/nuzhatyamin/Near-optimal-EM-using-IL/tree/main/Data) repository contains sample NREL Energy harvest data(2015-2017) and optimal energy allocation data. The data is used to generate features to train policys.
 - **Data Preparation**
-  - Run simile_data_preparation.py
+  - Run oracle_gen.py to generate the oracle allocation and battery energy. This will be later used in feature generation
+  - Run simile_data_preparation.py to generate feature episodes
   - Each episode will be 24 hours and saved as .p files in the Data/Files folder
   - Separate the files into Train_files, Valid_files and Test_files folders 
   - Create xml files containing corresponding pickle files
