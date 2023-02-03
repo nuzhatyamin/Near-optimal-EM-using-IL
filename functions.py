@@ -199,3 +199,44 @@ def calculate_utility(energy_consumption, T, beta_val, ME, alpha):
     return utility, utility_hourly
 
 
+def energy_management_optimal(actual_energy_mat,
+                                exp_params,
+                                T, day):
+
+    '''function to implement energy management algorithm'''
+	
+    exp_params_relaxed = exp_params.copy()
+    E_begin = exp_params['start battery']
+    E_min = exp_params['minimum_energy']
+    ME = exp_params['utility_ME']
+    beta = exp_params['beta_value']
+    alpha = exp_params['alpha_value']
+    alpha_ewma = exp_params['alpha_EWMA']
+    
+
+    #do the optimization to get initial energy allocation    
+    Ec_alloc_opt = [0]*T
+    E_bat_opt = [0]*(T+1)
+    E_bat_opt[0] = E_begin
+ 
+        
+    print('day',day)
+    
+    EH_act = actual_energy_mat[day,:]
+
+    #get optimal solution using actual EH
+    E_bat_optimal, Ec_est_optimal = energy_consumption_optimization(E_bat_opt, Ec_alloc_opt, EH_act, 
+                                                    exp_params, T, 0)
+    
+    #calculate optimal utility
+    utility_optimal, Ec_est_optimal = calculate_utility(Ec_est_optimal, T, beta, ME, alpha)
+    
+
+
+    optimal_results = {'E_consumption' : Ec_est_optimal,
+                       'E_bat' : E_bat_optimal, 
+                       'Utility' : utility_optimal}
+    
+    return optimal_results
+
+
